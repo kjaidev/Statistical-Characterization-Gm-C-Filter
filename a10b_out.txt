@@ -1,0 +1,6 @@
+step MC: 600200 rows -> 200 runs
+  overshoot %    mean 4.76  sd 1.08  min 1.62  p5 3.22  median 4.75  p95 6.51  max 7.31
+  rise 10-90 ns  mean 234.3  sd 19.5  min 194.9  p5 207.1  median 232.6  p95 265.0  max 315.5
+  DC gain        mean 0.9827  sd 0.0021  min 0.9778  p5 0.9791  median 0.9828  p95 0.9859  max 0.9884
+  out offset mV  mean -8.7  sd 11.4  min -44.3  p5 -26.6  median -9.6  p95 10.4  max 18.9
+  (ideal 2nd-order Butterworth, Q=0.707: overshoot 4.3 %)

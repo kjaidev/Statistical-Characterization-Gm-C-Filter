@@ -1,0 +1,9 @@
+.control
+op
+ac dec 100 10k 100Meg
+meas ac gdb find vdb(vo2) at=6.4e+06
+meas ac ph find vp(vo2) at=6.4e+06
+tran 7.8125e-10 1.5625e-06 0 7.8125e-10
+wrdata a9_wave.txt v(vo2) v(vin)
+quit
+.endc

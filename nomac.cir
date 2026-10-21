@@ -1,0 +1,6 @@
+.control
+op
+ac dec 50 10k 100Meg
+wrdata @CURV@ vdb(vo2) vp(vo2)
+quit
+.endc

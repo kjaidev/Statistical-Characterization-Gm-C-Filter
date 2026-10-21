@@ -1,0 +1,10 @@
+.control
+tran 2n 4u
+meas tran vini avg v(vo2) from=50n to=100n
+meas tran vfin avg v(vo2) from=3.5u to=4u
+meas tran vmax max v(vo2) from=100n to=4u
+let os = (vmax - vfin)/(vfin - vini)*100
+print os
+wrdata /foss/designs/gmc-filter/tran_out.txt v(vo2)
+quit
+.endc

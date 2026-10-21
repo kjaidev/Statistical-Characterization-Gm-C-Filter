@@ -1,0 +1,70 @@
+mc ptat
+Vinp vin 0 DC 0.9 AC 1
+V1 VDD 0 DC 1.8
+Vinn vcm 0 DC 0.9
+XMr vbn vbn 0 0 sky130_fd_pr__nfet_01v8 L=1 W=6 nf=1 ad=1.74 as=1.74 pd=12.58 ps=12.58 nrd=0.0483333333333333 nrs=0.0483333333333333 sa=0 sb=0 sd=0 mult=1
+XMr3 vbn3 vbn3 0 0 sky130_fd_pr__nfet_01v8 L=1 W=6 nf=1 ad=1.74 as=1.74 pd=12.58 ps=12.58 nrd=0.0483333333333333 nrs=0.0483333333333333 sa=0 sb=0 sd=0 mult=1
+C1 vo1 0 10p
+C2 vo2 0 10p
+Vsns nr 0 DC 0
+XMP1 n1c pg VDD VDD sky130_fd_pr__pfet_01v8 w=8 l=2
+XMP2 n2c pg VDD VDD sky130_fd_pr__pfet_01v8 w=8 l=2
+XMc1 n1c n1c 0 0 sky130_fd_pr__nfet_01v8 w=2 l=2
+XMc2 n2c n1c ns 0 sky130_fd_pr__nfet_01v8 w=8 l=2
+XRc ns nr 0 sky130_fd_pr__res_high_po_1p41 w=1.41 l=51.470
+Rst VDD n1c 5Meg
+Rpg n2c pg 1
+XMP3 vbn pg VDD VDD sky130_fd_pr__pfet_01v8 w=8 l=2
+XMP4 vbn3 pg VDD VDD sky130_fd_pr__pfet_01v8 w=11.84 l=2
+.nodeset v(n1c)=0.8 v(n2c)=0.9 v(pg)=0.9 v(vbn)=0.6 v(vbn3)=0.6
+XM1_1 n2_1 g1_1 n1_1 0 sky130_fd_pr__nfet_01v8 L=0.5 W=4 nf=1 ad=1.16 as=1.16 pd=8.58 ps=8.58 nrd=0.0725 nrs=0.0725 sa=0 sb=0 sd=0 mult=1
+Vo1_1 g1_1 vin DC 0.000000e+00
+XM2_1 vo1 g2_1 n1_1 0 sky130_fd_pr__nfet_01v8 L=0.5 W=4 nf=1 ad=1.16 as=1.16 pd=8.58 ps=8.58 nrd=0.0725 nrs=0.0725 sa=0 sb=0 sd=0 mult=1
+Vo2_1 g2_1 vo2 DC 0.000000e+00
+XM3_1 n2_1 g3_1 VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=8 nf=1 ad=2.32 as=2.32 pd=16.58 ps=16.58 nrd=0.03625 nrs=0.03625 sa=0 sb=0 sd=0 mult=1
+Vo3_1 g3_1 n2_1 DC 0.000000e+00
+XM4_1 vo1 g4_1 VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=8 nf=1 ad=2.32 as=2.32 pd=16.58 ps=16.58 nrd=0.03625 nrs=0.03625 sa=0 sb=0 sd=0 mult=1
+Vo4_1 g4_1 n2_1 DC 0.000000e+00
+XM5_1 n1_1 g5_1 0 0 sky130_fd_pr__nfet_01v8 L=1 W=6 nf=1 ad=1.74 as=1.74 pd=12.58 ps=12.58 nrd=0.0483333333333333 nrs=0.0483333333333333 sa=0 sb=0 sd=0 mult=1
+Vo5_1 g5_1 vbn DC 0.000000e+00
+XM1_2 n2_2 g1_2 n1_2 0 sky130_fd_pr__nfet_01v8 L=0.5 W=4 nf=1 ad=1.16 as=1.16 pd=8.58 ps=8.58 nrd=0.0725 nrs=0.0725 sa=0 sb=0 sd=0 mult=1
+Vo1_2 g1_2 vo1 DC 0.000000e+00
+XM2_2 vo2 g2_2 n1_2 0 sky130_fd_pr__nfet_01v8 L=0.5 W=4 nf=1 ad=1.16 as=1.16 pd=8.58 ps=8.58 nrd=0.0725 nrs=0.0725 sa=0 sb=0 sd=0 mult=1
+Vo2_2 g2_2 vcm DC 0.000000e+00
+XM3_2 n2_2 g3_2 VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=8 nf=1 ad=2.32 as=2.32 pd=16.58 ps=16.58 nrd=0.03625 nrs=0.03625 sa=0 sb=0 sd=0 mult=1
+Vo3_2 g3_2 n2_2 DC 0.000000e+00
+XM4_2 vo2 g4_2 VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=8 nf=1 ad=2.32 as=2.32 pd=16.58 ps=16.58 nrd=0.03625 nrs=0.03625 sa=0 sb=0 sd=0 mult=1
+Vo4_2 g4_2 n2_2 DC 0.000000e+00
+XM5_2 n1_2 g5_2 0 0 sky130_fd_pr__nfet_01v8 L=1 W=6 nf=1 ad=1.74 as=1.74 pd=12.58 ps=12.58 nrd=0.0483333333333333 nrs=0.0483333333333333 sa=0 sb=0 sd=0 mult=1
+Vo5_2 g5_2 vbn DC 0.000000e+00
+XM1_3 n2_3 g1_3 n1_3 0 sky130_fd_pr__nfet_01v8 L=0.5 W=4 nf=1 ad=1.16 as=1.16 pd=8.58 ps=8.58 nrd=0.0725 nrs=0.0725 sa=0 sb=0 sd=0 mult=1
+Vo1_3 g1_3 vcm DC 0.000000e+00
+XM2_3 vo1 g2_3 n1_3 0 sky130_fd_pr__nfet_01v8 L=0.5 W=4 nf=1 ad=1.16 as=1.16 pd=8.58 ps=8.58 nrd=0.0725 nrs=0.0725 sa=0 sb=0 sd=0 mult=1
+Vo2_3 g2_3 vo1 DC 0.000000e+00
+XM3_3 n2_3 g3_3 VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=8 nf=1 ad=2.32 as=2.32 pd=16.58 ps=16.58 nrd=0.03625 nrs=0.03625 sa=0 sb=0 sd=0 mult=1
+Vo3_3 g3_3 n2_3 DC 0.000000e+00
+XM4_3 vo1 g4_3 VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=8 nf=1 ad=2.32 as=2.32 pd=16.58 ps=16.58 nrd=0.03625 nrs=0.03625 sa=0 sb=0 sd=0 mult=1
+Vo4_3 g4_3 n2_3 DC 0.000000e+00
+XM5_3 n1_3 g5_3 0 0 sky130_fd_pr__nfet_01v8 L=1 W=6 nf=1 ad=1.74 as=1.74 pd=12.58 ps=12.58 nrd=0.0483333333333333 nrs=0.0483333333333333 sa=0 sb=0 sd=0 mult=1
+Vo5_3 g5_3 vbn3 DC 0.000000e+00
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice fs_mm
+.temp 27
+.control
+setseed 12385
+let n = 40
+let k = 0
+while k < n
+reset
+op
+let ibx = -i(Vsns)
+set ibs = $&ibx
+ac dec 20 100k 10Meg
+meas ac f3 when vdb(vo2)=-3 fall=1
+meas ac f90 when vp(vo2)=-1.5708 fall=1
+meas ac pk max vdb(vo2)
+echo RES $ibs $&f3 $&f90 $&pk >> mcw_40.out
+let k = k + 1
+end
+quit
+.endc
+.end

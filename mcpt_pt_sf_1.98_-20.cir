@@ -1,0 +1,19 @@
+.control
+setseed 12345
+let n = 750
+let k = 0
+while k < n
+  reset
+  op
+  let pw = -v1#branch[0]*1.98
+  print pw >> /foss/designs/gmc-filter/results_pt_sf_1.98_-20.txt
+  ac dec 20 100k 10Meg
+  meas ac f3 when vdb(vo2)=-3 fall=1
+  meas ac f90 when vp(vo2)=-1.5708 fall=1
+  meas ac pk max vdb(vo2)
+  meas ac g find vdb(vo2) at=100k
+  print f3 f90 pk g >> /foss/designs/gmc-filter/results_pt_sf_1.98_-20.txt
+  let k = k + 1
+end
+quit
+.endc

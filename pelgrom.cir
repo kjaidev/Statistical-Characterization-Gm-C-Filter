@@ -1,0 +1,36 @@
+Pelgrom bench
+.option scale=1.0u
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt_mm
+Ia1 0 a1 10u
+Ib1 0 b1 10u
+Ia2 0 a2 10u
+Ib2 0 b2 10u
+Ia3 0 a3 10u
+Ib3 0 b3 10u
+Ia4 0 a4 10u
+Ib4 0 b4 10u
+XMa1 a1 a1 0 0 sky130_fd_pr__nfet_01v8 w=1 l=0.5
+XMb1 b1 b1 0 0 sky130_fd_pr__nfet_01v8 w=1 l=0.5
+XMa2 a2 a2 0 0 sky130_fd_pr__nfet_01v8 w=2 l=1
+XMb2 b2 b2 0 0 sky130_fd_pr__nfet_01v8 w=2 l=1
+XMa3 a3 a3 0 0 sky130_fd_pr__nfet_01v8 w=4 l=2
+XMb3 b3 b3 0 0 sky130_fd_pr__nfet_01v8 w=4 l=2
+XMa4 a4 a4 0 0 sky130_fd_pr__nfet_01v8 w=8 l=4
+XMb4 b4 b4 0 0 sky130_fd_pr__nfet_01v8 w=8 l=4
+.control
+setseed 777
+let n = 500
+let k = 0
+while k < n
+  reset
+  op
+  let d1 = v(a1) - v(b1)
+  let d2 = v(a2) - v(b2)
+  let d3 = v(a3) - v(b3)
+  let d4 = v(a4) - v(b4)
+  print d1 d2 d3 d4 >> /foss/designs/gmc-filter/pelgrom_out.txt
+  let k = k + 1
+end
+quit
+.endc
+.end

@@ -1,0 +1,11 @@
+.control
+let k = 0
+while k < 5
+  reset
+  ac dec 20 100k 10Meg
+  meas ac f3 when vdb(vo2)=-3 fall=1
+  meas ac f90 when vp(vo2)=-1.5708 fall=1
+  echo run $&k f3 $&f3 f90 $&f90
+  let k = k + 1
+end
+.endc

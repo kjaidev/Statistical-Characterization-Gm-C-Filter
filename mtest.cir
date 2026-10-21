@@ -1,0 +1,20 @@
+mult test
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+Ia 0 a DC 48u
+XMa a a 0 0 sky130_fd_pr__nfet_01v8 L=1 W=6 nf=1 mult=1
+Ib 0 b DC 48u
+XMb b b 0 0 sky130_fd_pr__nfet_01v8 L=1 W=6 nf=1 mult=4
+Ic 0 c DC 48u
+XMc c c 0 0 sky130_fd_pr__nfet_01v8 L=1 W=24 nf=1 mult=1
+Id 0 d DC 48u
+XMd d d 0 0 sky130_fd_pr__nfet_01v8 L=1 W=6 nf=4 mult=1
+Ie 0 e DC 48u
+XMe1 e e 0 0 sky130_fd_pr__nfet_01v8 L=1 W=6 nf=1
+XMe2 e e 0 0 sky130_fd_pr__nfet_01v8 L=1 W=6 nf=1
+XMe3 e e 0 0 sky130_fd_pr__nfet_01v8 L=1 W=6 nf=1
+XMe4 e e 0 0 sky130_fd_pr__nfet_01v8 L=1 W=6 nf=1
+.control
+op
+print v(a) v(b) v(c) v(d) v(e)
+.endc
+.end

@@ -1,0 +1,3 @@
+design,conditions,runs,mean_yield,min_yield,worst_f3_shift_MHz,mean_f3_sd_pct,worst_f3_sd_pct,Q_min,Q_max,P_min_uW,P_max_uW
+PTAT,45.0,33750.0,88.714,72.267,0.084,6.072,8.279,0.697,0.737,72.028,112.976
+voltage,45.0,33750.0,22.424,0.0,0.944,5.319,10.224,0.598,0.806,27.992,132.52

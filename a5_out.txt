@@ -1,0 +1,38 @@
+MC samples: 750 750 750
+sigma(Vgs at fixed Id): pair(W4/L0.5) 2.76 mV  tail/ref(W6/L1) 1.45 mV  load(W8/L0.5) 2.89 mV
+nominal: f3 1.6102 MHz  Q 0.7218
+do1_m1  pair  dlnf3/dV    0.264 /V   dlnQ/dV    0.127 /V
+do1_m2  pair  dlnf3/dV    0.054 /V   dlnQ/dV    0.025 /V
+do1_m3  load  dlnf3/dV    5.965 /V   dlnQ/dV    3.100 /V
+do1_m4  load  dlnf3/dV   -6.024 /V   dlnQ/dV   -3.132 /V
+do1_m5  tail  dlnf3/dV   10.505 /V   dlnQ/dV    5.418 /V
+do2_m1  pair  dlnf3/dV    1.236 /V   dlnQ/dV    0.552 /V
+do2_m2  pair  dlnf3/dV   -0.928 /V   dlnQ/dV   -0.402 /V
+do2_m3  load  dlnf3/dV    6.269 /V   dlnQ/dV    3.158 /V
+do2_m4  load  dlnf3/dV   -6.341 /V   dlnQ/dV   -3.195 /V
+do2_m5  tail  dlnf3/dV   10.441 /V   dlnQ/dV    5.284 /V
+do3_m1  pair  dlnf3/dV    0.705 /V   dlnQ/dV    0.028 /V
+do3_m2  pair  dlnf3/dV   -1.208 /V   dlnQ/dV   -0.554 /V
+do3_m3  load  dlnf3/dV   -3.549 /V   dlnQ/dV   -4.281 /V
+do3_m4  load  dlnf3/dV    3.580 /V   dlnQ/dV    4.323 /V
+do3_m5  tail  dlnf3/dV   -7.998 /V   dlnQ/dV   -8.356 /V
+dr1     ref   dlnf3/dV  -20.817 /V   dlnQ/dV  -10.635 /V
+dr3     ref   dlnf3/dV    7.948 /V   dlnQ/dV    8.305 /V
+
+[mirror x1   (MC at 27C: f3 5.91 %, Q 3.68 %)] predicted sigma f3 = 5.62 %   sigma Q = 3.61 %
+   pair   f3 variance share   1.1 %   Q variance share   0.5 %
+   load   f3 variance share  46.8 %   Q variance share  49.3 %
+   tail   f3 variance share  19.0 %   Q variance share  20.7 %
+   ref    f3 variance share  33.2 %   Q variance share  29.6 %
+   OTA1 f3 variance share   0.0 %
+   OTA2 f3 variance share   0.0 %
+   OTA3 f3 variance share   0.0 %
+
+[mirror x4   (MC at 27C: f3 4.81 %, Q 3.13 %)] predicted sigma f3 = 4.87 %   sigma Q = 3.18 %
+   pair   f3 variance share   1.4 %   Q variance share   0.6 %
+   load   f3 variance share  62.3 %   Q variance share  63.3 %
+   tail   f3 variance share  25.2 %   Q variance share  26.6 %
+   ref    f3 variance share  11.1 %   Q variance share   9.5 %
+   OTA1 f3 variance share   0.0 %
+   OTA2 f3 variance share   0.0 %
+   OTA3 f3 variance share   0.0 %

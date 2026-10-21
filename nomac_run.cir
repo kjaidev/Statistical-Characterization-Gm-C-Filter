@@ -1,0 +1,6 @@
+.control
+op
+ac dec 50 10k 100Meg
+wrdata /foss/designs/gmc-filter/curves_nom_pt.txt vdb(vo2) vp(vo2)
+quit
+.endc

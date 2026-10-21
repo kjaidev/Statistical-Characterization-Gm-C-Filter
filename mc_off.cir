@@ -1,0 +1,12 @@
+.control
+setseed 12345
+let n = @N@
+let k = 0
+while k < n
+  reset
+  op
+  print v(vo1) v(vo2) >> @OUT@
+  let k = k + 1
+end
+quit
+.endc

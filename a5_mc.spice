@@ -1,0 +1,19 @@
+mc vgs
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt_mm
+Vdd vdd 0 1.8
+Ia 0 a DC 6u
+XMa a a 0 0 sky130_fd_pr__nfet_01v8 L=0.5 W=4 nf=1
+Ib 0 b DC 12u
+XMb b b 0 0 sky130_fd_pr__nfet_01v8 L=1 W=6 nf=1
+Ic c 0 DC 6u
+XMc c c vdd vdd sky130_fd_pr__pfet_01v8 L=0.5 W=8 nf=1
+.control
+setseed 12345
+repeat 750
+  reset
+  op
+  print v(a) v(b) v(c)
+end
+quit
+.endc
+.end

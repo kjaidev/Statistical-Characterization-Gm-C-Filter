@@ -1,0 +1,11 @@
+.control
+setseed 12345
+set appendwrite
+repeat 200
+ reset
+ tran 2n 6u 0 2n
+ linearize v(vo2)
+ wrdata a10_step.txt v(vo2)
+end
+quit
+.endc

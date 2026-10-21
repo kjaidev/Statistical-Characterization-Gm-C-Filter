@@ -1,0 +1,6 @@
+.control
+ac dec 40 100k 10Meg
+let mg=db(v(vo2))
+let pg=180/pi*cph(v(vo2))
+wrdata @CURV@ mg pg
+.endc

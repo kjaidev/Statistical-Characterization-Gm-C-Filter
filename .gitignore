@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.raw
+*.log
+.venv/
+.cache/
+tmp/

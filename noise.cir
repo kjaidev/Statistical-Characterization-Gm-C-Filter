@@ -1,0 +1,9 @@
+.control
+op
+noise v(vo2) vinp dec 20 1k 10Meg
+setplot noise1
+wrdata @CURV@ onoise_spectrum inoise_spectrum
+setplot noise2
+print onoise_total inoise_total
+quit
+.endc

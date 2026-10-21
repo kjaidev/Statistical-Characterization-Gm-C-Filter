@@ -1,0 +1,3 @@
+,f3_mean_MHz,f3_sd_pct,Q_mean,Q_sd,rip_mean_dB,rip_sd_dB,rip_max_dB
+nominal tt 1.8V 27C,1.6019,5.6364,0.7204,0.0258,0.0333,0.0433,0.3497
+worst sf 1.62V -20C,1.5153,7.7865,0.6973,0.0305,0.0161,0.0336,0.3391

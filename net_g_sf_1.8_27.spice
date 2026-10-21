@@ -1,0 +1,45 @@
+** sch_path: /foss/designs/gmc-filter/gmc_top.sch
+.temp 27
+**.subckt gmc_top
+Vinp vin 0 0.9 ac 1
+V1 VDD 0 1.8
+Vinn vcm 0 0.9
+Vbias_tail_v vb 0 0.7
+C1 vo1 0 10p
+x1 vo1 vin vo2 vb ota_core
+x2 vo2 vo1 vcm vb ota_core
+x3 vo1 vcm vo1 vb3 ota_core
+C2 vo2 0 10p
+Vb3 vb3 0 0.73
+**** begin user architecture code
+
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice sf_mm
+
+
+.include /foss/designs/gmc-filter/mc_g_sf_1.8_27.cir
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  ota_core.sym # of pins=4
+** sym_path: /foss/designs/gmc-filter/ota_core.sym
+** sch_path: /foss/designs/gmc-filter/ota_core.sch
+.subckt ota_core OUT1 IN1+ IN1- Vbias_tail
+*.ipin IN1+
+*.ipin IN1-
+*.opin OUT1
+*.ipin Vbias_tail
+XM1 net2 IN1+ net1 0 sky130_fd_pr__nfet_01v8 L=0.5 W=4 nf=1 ad=1.16 as=1.16 pd=8.58 ps=8.58 nrd=0.0725 nrs=0.0725 sa=0 sb=0 sd=0
++ mult=1
+XM2 OUT1 IN1- net1 0 sky130_fd_pr__nfet_01v8 L=0.5 W=4 nf=1 ad=1.16 as=1.16 pd=8.58 ps=8.58 nrd=0.0725 nrs=0.0725 sa=0 sb=0 sd=0
++ mult=1
+XM3 net2 net2 VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=8 nf=1 ad=2.32 as=2.32 pd=16.58 ps=16.58 nrd=0.03625 nrs=0.03625 sa=0 sb=0
++ sd=0 mult=1
+XM4 OUT1 net2 VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=8 nf=1 ad=2.32 as=2.32 pd=16.58 ps=16.58 nrd=0.03625 nrs=0.03625 sa=0 sb=0
++ sd=0 mult=1
+XM5 net1 Vbias_tail 0 0 sky130_fd_pr__nfet_01v8 L=1 W=6 nf=1 ad=1.74 as=1.74 pd=12.58 ps=12.58 nrd=0.0483333333333333
++ nrs=0.0483333333333333 sa=0 sb=0 sd=0 mult=1
+.ends
+
+.GLOBAL VDD
+.end

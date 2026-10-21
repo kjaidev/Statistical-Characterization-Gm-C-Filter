@@ -1,0 +1,7 @@
+.control
+op
+ac dec 100 100k 10Meg
+meas ac f3 when vdb(vo2)=-3 fall=1
+meas ac f90 when vp(vo2)=-1.5708 fall=1
+quit
+.endc

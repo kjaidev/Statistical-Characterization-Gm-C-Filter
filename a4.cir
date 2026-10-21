@@ -1,0 +1,9 @@
+.control
+op
+print v(vbn) v(vbn3) v(vo1) v(vo2) v(x1.net1) v(x1.net2) v(x3.net1) v(x3.net2)
+ac dec 40 100k 10Meg
+meas ac f3 when vdb(vo2)=-3 fall=1
+meas ac f90 when vp(vo2)=-1.5708 fall=1
+print f3 f90
+quit
+.endc
