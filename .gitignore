@@ -5,3 +5,6 @@ __pycache__/
 .venv/
 .cache/
 tmp/
+*:Zone.Identifier
+*.bak*
+*.tgz
